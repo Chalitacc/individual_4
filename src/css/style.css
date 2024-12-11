@@ -3,10 +3,14 @@ html{
     height: 100%;
 }
 
+body{
+    transition: background-color 0.3s ease;
+}
 header{
     height: inherit;
     width: 100%;
     background-color: grey;
+  
 }
 
 h1{
@@ -35,7 +39,6 @@ a{
 
 main{
  display: flex;
-
 }
 
 
@@ -82,11 +85,20 @@ main{
     align-items: center;
 }
 
+.content.active > #toast{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .content.active > #alert{
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -147,7 +159,7 @@ main{
 }
 
 /* TOAST */
-#toast__window{
+.toast__window{
     visibility: hidden;
     min-width: 200px;
     text-align: center;
@@ -159,9 +171,82 @@ main{
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-#toast.show{
+.toast__window.show{
     visibility: visible;
     opacity: 1;
 }
 
+/* MODAL */
+.modal__container{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 300px;
+    padding:var(--spacing-small);
+    border-radius: 3rem;
+    margin-top: 2rem;
+}
+.modual__contents{
+    width: 200px;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+}
 
+.modal__open-button{
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    background-color:rgb(75, 96, 235);
+}
+
+.modal__open-button:hover{
+    color: white;
+}
+
+.modal__close-button{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+.modal__close-button:hover{
+    background-color:rgb(75, 96, 235);
+    color: white;
+}
+
+
+/* COUNTER */
+.counter__container{
+   padding-top: var(--spacing-small);
+}
+.counter__title{
+    font-weight: bold;
+    font-size: var(--font-size-mediun);
+    padding-top: var(--spacing-small);
+}
+
+
+.decrease{
+    width: 30px;
+    height: 30px;
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    align-self: center;
+
+}
+
+.increase{
+    width: 30px;
+    height: 30px;
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    align-self: center;
+}

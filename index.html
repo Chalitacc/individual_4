@@ -21,11 +21,16 @@
         <a href="#alert" id="link_alert">Alert</a> 
         <a href="#button"  id="link_button">Button</a> 
         <a href="#toast"   id="link_toast">Toast</a> 
+        <a href="#pop-up"  id="link_pop-up">Pop up window</a> 
+        <a href="#modal"   id="link_modal">Modal</a> 
+        <a href="#counter"  id="link_counter">Counter</a> 
+       
+
       
         <!-- 
-          <a href="#card"   id="link_card">Card</a> 
-        <a href="#"  id="pop-up">Pop up window</a> 
-        <a href="#"  id="counter">Counter</a> 
+         
+      
+        
         -->
     </nav> 
   </header>
@@ -63,13 +68,44 @@
         </div>
 
         <div class="content" id="toast">
-            <label for="toast content">What is your favorite food?</label>
+            <p>What is your favorite food?</p>
             <input type="text" name="toast input" id="toast_input" required placeholder="ex.pizza?">
-            <button class="color__button">Submit your food</button>
+            <button class="submit__button">Submit your food</button>
 
-            <div id="toast__window">Thank you for sharing!</div>
+            <div class="toast__window">Thank you for sharing!</div>
         
         </div>
+
+        <div class="content" id="pop-up">
+            <button class="pop-up__button">Check the News!</button>
+        </div>
+
+
+        <div class="content" id="modal">
+            <button class="modal__open-button"> I Am a Modal</button>
+            <div class="modal__container">
+                <div class="modual__contents">
+                    <h2>My message:</h2>
+                    <p>Thank you for clikcing me..</p>
+                    <button class="modal__close-button">Close me</button>
+    
+                </div>
+            </div>
+        
+        </div>
+
+
+        <div class="content" id="counter">
+            <p class="counter__title">This is a counter:</p>
+            <div class="counter__container">
+                <button class="decrease">-</button>
+                <span class="value">0</span>
+                <button class="increase">+</button>
+            </div>
+     
+        </div>
+
+
   </main>
   <script src="./src/js/app.js"></script>
 </body>
