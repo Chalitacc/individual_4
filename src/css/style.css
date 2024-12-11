@@ -10,6 +10,7 @@ header{
     height: inherit;
     width: 100%;
     background-color: grey;
+    padding: var(--spacing-medium) var(--spacing-small);
   
 }
 
@@ -25,10 +26,7 @@ h1{
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    padding-top: var(---spacing-medium);
-    padding-bottom: var(---spacing-small);
-    padding-left: var(---spacing-small);
-    padding-right: var(---spacing-small);
+    padding: var(--spacing-small) var(--spacing-small);
     
 }
 
@@ -39,6 +37,7 @@ a{
 
 main{
  display: flex;
+ width: 100%;
 }
 
 
@@ -53,9 +52,11 @@ main{
 }
 
 .content.active{
-    width: 80vw;
+    width: 100%;
     height: 80vh;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     opacity: 1; 
     pointer-events: auto;
@@ -68,42 +69,11 @@ main{
 
 
 
-.content.active > #accordian{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.content.active > #button{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content.active > #toast{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content.active > #alert{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 /* ACCORDIAN */
 
+.accordian__title{
+    padding-right: var(--spacing-small);
+}
 .accordian__title__container-2{
     display: flex;
 }
@@ -121,8 +91,8 @@ main{
 
 .accordian__toggle-button{
     padding: 0.5rem;
-    margin-left: var(---spacing-small);
-    margin-bottom: var(---spacing-small);
+    margin-left: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
     cursor: pointer;
     border:none;
 }
@@ -158,7 +128,23 @@ main{
     width: 100%;
 }
 
+.alert__button{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    
+}
+
+
+/* BUTTON */
+
+.color__button{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
 /* TOAST */
+
 .toast__window{
     visibility: hidden;
     min-width: 200px;
@@ -174,6 +160,21 @@ main{
 .toast__window.show{
     visibility: visible;
     opacity: 1;
+}
+
+.toast__text{
+    padding-right: var(--spacing-small);
+    font-weight: bold;
+}
+
+input{
+    padding-left: 2px;
+}
+
+.submit__button{
+    margin-left: var(--spacing-small);
+    cursor: pointer;
+    width: 100px;
 }
 
 /* MODAL */
@@ -203,13 +204,7 @@ main{
     width: 100px;
     height: 30px;
     cursor: pointer;
-    background-color:rgb(75, 96, 235);
 }
-
-.modal__open-button:hover{
-    color: white;
-}
-
 .modal__close-button{
     width: 100px;
     height: 30px;
@@ -231,6 +226,7 @@ main{
     font-weight: bold;
     font-size: var(--font-size-mediun);
     padding-top: var(--spacing-small);
+    padding-right: var(--spacing-small);
 }
 
 

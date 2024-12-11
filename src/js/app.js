@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             
         })
 
-        accordianContainer.style.display = "block"; 
+        // accordianContainer.style.display = "block"; 
         alertButton.style.display = "block"; 
         buttonChange.style.display = "block"; 
         submitButton.style.display = "block"
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             }
 
             if (targetId === "accordian"){
-                accordianContainer.style.display = "block"
+                // accordianContainer.style.display = "block"
             }
         })
     })       
